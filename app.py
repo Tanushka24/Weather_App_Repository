@@ -19,7 +19,8 @@ def get_weatherdata():
 
     reponse = requests.get(url, params = param)
     data = reponse.json()
-    return f"data : {data}"
+    city = data['name']
+    return f"data : {data}, city :{city}"
 
 
 
